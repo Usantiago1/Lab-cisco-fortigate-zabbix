@@ -1,0 +1,17 @@
+FortiGate-VM64-KVM # config firewall policy 
+
+FortiGate-VM64-KVM (policy) # show 
+config firewall policy
+    edit 1
+        set name "Ubuntu_to_Router"
+        set uuid a0b2c81a-52fc-51f1-941f-440df16799e9
+        set srcintf "port1"
+        set dstintf "port2"
+        set action accept
+        set srcaddr "all"
+        set dstaddr "all"
+        set schedule "always"
+        set service "ALL"
+        set logtraffic disable
+    next
+end
